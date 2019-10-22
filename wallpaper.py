@@ -121,6 +121,9 @@ def draw_loading_img():
 # 데이터 문자열을 이미지에 적고 바탕화면에 적용하는  
 def draw_list_img():
     food = []
+    food.append([])
+    food[0].append(datetime.datetime.today().strftime("%Y.%m.%d"))
+    food[0].append('')
     food.append(get_diet(1, datetime.datetime.today().strftime("%Y.%m.%d")).split('\n'))
     food.append(get_diet(2, datetime.datetime.today().strftime("%Y.%m.%d")).split('\n'))
     food.append(get_diet(3, datetime.datetime.today().strftime("%Y.%m.%d")).split('\n'))
@@ -139,7 +142,7 @@ def draw_list_img():
     for i in food:
         for j in i:
             cnt += 35
-            draw.text((x1 + 60, y1 + 30 + cnt), j, (0, 0, 0), font)
+            draw.text((x1 + 60, y1 + 20 + cnt), j, (0, 0, 0), font)
     img.save(r"C:\wallpaper_changer\result.jpg")
     path = r"C:\wallpaper_changer\result.jpg"
     ctypes.windll.user32.SystemParametersInfoW(20, 0, path, 3)
