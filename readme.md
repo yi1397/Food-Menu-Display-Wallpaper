@@ -10,11 +10,7 @@
 - ctypes
 
 ### 사용하는 방법
- 작업스케줄러에 wallpaper.py를 등록하여서 사용합니다.
-
-### 설정 화면
-
-![setting](./setting_screenshot.png) 
+ 작업스케줄러에 실행파일을 등록하여서 사용합니다.
 
 ### 변경된 바탕화면
 ![result](./result.PNG) 
